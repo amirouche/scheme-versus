@@ -103,16 +103,19 @@
 
 (define root (getelem "#root"))
 
-(define other (exp-html '(define exp-html
-                           (lambda (exp)
-                             (element-new
-                              `(div.line
-                                ,(exp-html-base exp)))))))
+(define read-string
+  (lambda (s)
+    (read (open-input-string s))))
 
 
-(element-insert! root other)
+(define expose
+  (lambda args
+    (define i (console-log "bar"))
+    (define code (read-string (element-content "textarea")))
+    (define other (exp-html code))
+    (element-clear! root)
+    (element-append-child! root other)))
 
+(define button-display (car (js-array->list (getelem "#display"))))
 
-(element-insert! root
-                 (element-new
-                  `(div.line (div.editor (a href "" "define")))))
+(add-handler! "#display" "click" expose)
