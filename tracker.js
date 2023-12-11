@@ -6279,8 +6279,8 @@ If you're using serverside rendering in your app, make sure that tracker is load
 
     function init() {
         const tracker = new API({
-            projectKey: "weyNvGiC5ga7LkeINhaf",
-            ingestPoint: "https://or-release-ee.rjsh.me/ingest",
+            projectKey: "q5Wb11B4u9LwerN5a5Bp",
+            ingestPoint: "https://https://ee.openreplay.tools/ingest",
         });
         tracker.start();
     }
