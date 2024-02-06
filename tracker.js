@@ -1,6 +1,6 @@
 var initOpts = {
-    projectKey: "q5Wb11B4u9LwerN5a5Bp",
-    ingestPoint: "https://ee.openreplay.tools/ingest",
+    projectKey: "5HL6UQ43FFVD3bm3VY0S",
+    ingestPoint: "https://foss.openreplay.com/ingest",
     defaultInputMode: 0,
     obscureTextNumbers: false,
     obscureTextEmails: true,
